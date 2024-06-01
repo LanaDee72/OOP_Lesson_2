@@ -43,14 +43,14 @@ public class Market implements MarketBehaviour, QueueBehaviour{
         
     }
 
-    @Override
-    public void giveOrders() {
-        if(actors.get(0).isTakeOrder == true){
-            for (Product product : orderProducts.get(0)) {
-                marketProducts.remove(product);
-            }
-        }
-    }
+    // @Override
+    // public void giveOrders() {
+    //     if(actors.get(0).isTakeOrder == true){
+    //         for (Product product : orderProducts.get(0)) {
+    //             marketProducts.remove(product);
+    //         }
+    //     }
+    // }
 
     @Override
     public void releaseFromQueue() {
@@ -69,8 +69,15 @@ public class Market implements MarketBehaviour, QueueBehaviour{
     }
 
     @Override
-    public void update(Product product) {
-        // добавление продуктов в маркет
+    public void update() {
+        if(actors.get(0).isTakeOrder == true){
+            for (Product product : orderProducts.get(0)) {
+                marketProducts.remove(product);
+            }
+        }
+    }
+
+    public void addProduct(Product product){
         marketProducts.add(product);
     }
 

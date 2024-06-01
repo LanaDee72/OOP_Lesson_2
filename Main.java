@@ -17,24 +17,24 @@ public class Main {
         Product chocolate = new Product("Шоколад", 85, LocalDate.of(2024, 3, 3));
 
         // Добавляем продукцы в маркет
-        market.update(water);
-        market.update(bread);
-        market.update(egg);
-        market.update(tomato);
-        market.update(cucumber);
-        market.update(chocolate);
-        market.update(water);
-        market.update(bread);
-        market.update(egg);
-        market.update(tomato);
-        market.update(cucumber);
-        market.update(chocolate);
-        market.update(water);
-        market.update(bread);
-        market.update(egg);
-        market.update(tomato);
-        market.update(cucumber);
-        market.update(chocolate);
+        market.addProduct(water);
+        market.addProduct(bread);
+        market.addProduct(egg);
+        market.addProduct(tomato);
+        market.addProduct(cucumber);
+        market.addProduct(chocolate);
+        market.addProduct(water);
+        market.addProduct(bread);
+        market.addProduct(egg);
+        market.addProduct(tomato);
+        market.addProduct(cucumber);
+        market.addProduct(chocolate);
+        market.addProduct(water);
+        market.addProduct(bread);
+        market.addProduct(egg);
+        market.addProduct(tomato);
+        market.addProduct(cucumber);
+        market.addProduct(chocolate);
 
         // Проверяем наличие продуктов в маркете
         System.out.println(market.getMarketProducts());
@@ -73,7 +73,7 @@ public class Main {
         robert.setTakeOrder(true);
 
         // Выдаем заказ и сразу исключаем из очереди
-        market.giveOrders();
+        market.update();
         market.releaseFromQueue();
         market.releaseFromMarket();
 
@@ -83,11 +83,11 @@ public class Main {
         System.out.println(market.getMarketProducts());
 
         // Выдаем заказ и сразу исключаем из очереди
-        market.giveOrders();
+        market.update();
         market.releaseFromQueue();
         market.releaseFromMarket();
 
-        market.giveOrders();
+        market.update();
         market.releaseFromQueue();
         market.releaseFromMarket();
 

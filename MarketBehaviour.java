@@ -8,5 +8,5 @@ public interface MarketBehaviour {
     
     void acceptToMarket(Actor actor); //входит в магазин
     void releaseFromMarket();  // выходит из магазина
-    void update(Product product);  // обновление состояния магазина
+    void update();  // обновление состояния магазина
 }

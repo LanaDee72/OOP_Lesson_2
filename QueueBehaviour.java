@@ -8,7 +8,7 @@ public interface QueueBehaviour {
 
     void takeInQueue(Actor actor); // войти в очередь
     void takeOrders(Actor actor, List<Product> actorOrder);  // принять заказ
-    void giveOrders();  // отдать заказ
+    // void giveOrders();  // отдать заказ
     void releaseFromQueue();  // выйти из очереди
 
     
